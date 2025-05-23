@@ -44,6 +44,9 @@
 // Constants for Clock multiplexers
 #define GENERIC_CLOCK_MULTIPLEXER_DFLL48M (0u)
 
+inline void EWD_toggle(void) { PORT->Group[1].OUTTGL.reg = (1<<3); }
+inline void EWD_init(void) { PORT->Group[1].DIRSET.reg = (1<<3); }
+
 void SystemInit( void )
 {
   /* Set 1 Flash Wait State for 48MHz, cf tables 20.9 and 35.27 in SAMD21 Datasheet */
@@ -77,9 +80,21 @@ void SystemInit( void )
                          SYSCTRL_XOSC32K_XTALEN | SYSCTRL_XOSC32K_EN32K ;
   SYSCTRL->XOSC32K.bit.ENABLE = 1 ; /* separate call, as described in chapter 15.6.3 */
 
+  //#if defined(EXTERNALWDT)
+  int i = 0;
+  EWD_init();
+  //#endif
+
   while ( (SYSCTRL->PCLKSR.reg & SYSCTRL_PCLKSR_XOSC32KRDY) == 0 )
   {
     /* Wait for oscillator stabilization */
+    // #if defined(EXTERNALWDT)
+    i++;
+    if (i > 10000){
+      EWD_toggle();
+      i = 0;
+    }
+    //#endif
   }
 
 #endif

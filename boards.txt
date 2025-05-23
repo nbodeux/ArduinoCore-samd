@@ -713,3 +713,155 @@ tian_cons.upload_port.0.pid=0xEA70
 tian_cons.descriptor.0=Standard Com Port
 tian_cons.hide=true
 tian_cons.build.board=SAMD_TIAN
+
+# Automation Gateway Board
+# --------------------
+auto_gateway.name=Automation Gateway
+auto_gateway.vid.0=0x2341
+auto_gateway.pid.0=0x8057
+auto_gateway.vid.1=0x2341
+auto_gateway.pid.1=0x0057
+auto_gateway.upload_port.0.vid=0x2341
+auto_gateway.upload_port.0.pid=0x8057
+auto_gateway.upload_port.1.vid=0x2341
+auto_gateway.upload_port.1.pid=0x0057
+auto_gateway.upload_port.2.board=nano_33_iot
+
+auto_gateway.upload.tool=bossac
+auto_gateway.upload.tool.default=bossac
+auto_gateway.upload.tool.network=arduino_ota
+auto_gateway.upload.protocol=sam-ba
+auto_gateway.upload.maximum_size=262144
+auto_gateway.upload.maximum_data_size=32768
+auto_gateway.upload.use_1200bps_touch=true
+auto_gateway.upload.wait_for_upload_port=true
+auto_gateway.upload.native_usb=true
+auto_gateway.build.mcu=cortex-m0plus
+auto_gateway.build.f_cpu=48000000L
+auto_gateway.build.usb_product="Automation Gateway Board"
+auto_gateway.build.usb_manufacturer="Nicholas Bodeux"
+auto_gateway.build.board=SAMD_NANO_33_IOT
+auto_gateway.build.core=arduino
+auto_gateway.build.extra_flags=-DCRYSTALLESS -D__SAMD21G18A__ {build.usb_flags}
+auto_gateway.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+auto_gateway.build.openocdscript=openocd_scripts/arduino_zero.cfg
+auto_gateway.build.variant=auto_gateway
+auto_gateway.build.vid=0x2341
+auto_gateway.build.pid=0x8057
+auto_gateway.bootloader.tool=openocd
+auto_gateway.bootloader.tool.default=openocd
+auto_gateway.bootloader.file=nano_33_iot/samd21_sam_ba_arduino_nano_33_iot.bin
+
+# Automation Sensor Board
+# --------------------
+auto_sensor.name=Automation Sensor
+auto_sensor.vid.0=0x2341
+auto_sensor.pid.0=0x8057
+auto_sensor.vid.1=0x2341
+auto_sensor.pid.1=0x0057
+auto_sensor.upload_port.0.vid=0x2341
+auto_sensor.upload_port.0.pid=0x8057
+auto_sensor.upload_port.1.vid=0x2341
+auto_sensor.upload_port.1.pid=0x0057
+auto_sensor.upload_port.2.board=nano_33_iot
+
+auto_sensor.upload.tool=bossac
+auto_sensor.upload.tool.default=bossac
+auto_sensor.upload.tool.network=arduino_ota
+auto_sensor.upload.protocol=sam-ba
+auto_sensor.upload.maximum_size=262144
+auto_sensor.upload.maximum_data_size=32768
+auto_sensor.upload.use_1200bps_touch=true
+auto_sensor.upload.wait_for_upload_port=true
+auto_sensor.upload.native_usb=true
+auto_sensor.build.mcu=cortex-m0plus
+auto_sensor.build.f_cpu=48000000L
+auto_sensor.build.usb_product="Automation Sensor Board"
+auto_sensor.build.usb_manufacturer="Nicholas Bodeux"
+auto_sensor.build.board=SAMD_NANO_33_IOT
+auto_sensor.build.core=arduino
+auto_sensor.build.extra_flags=-DCRYSTALLESS -D__SAMD21G18A__ {build.usb_flags}
+auto_sensor.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+auto_sensor.build.openocdscript=openocd_scripts/arduino_zero.cfg
+auto_sensor.build.variant=auto_sensor
+auto_sensor.build.vid=0x2341
+auto_sensor.build.pid=0x8057
+auto_sensor.bootloader.tool=openocd
+auto_sensor.bootloader.tool.default=openocd
+auto_sensor.bootloader.file=nano_33_iot/samd21_sam_ba_arduino_nano_33_iot.bin
+
+# Automation sensor board With XTal
+# --------------------
+auto_sensor_xtal.name=Automation Sensor XTAL
+auto_sensor_xtal.vid.0=0x2341
+auto_sensor_xtal.pid.0=0x8057
+auto_sensor_xtal.vid.1=0x2341
+auto_sensor_xtal.pid.1=0x0057
+auto_sensor_xtal.upload_port.0.vid=0x2341
+auto_sensor_xtal.upload_port.0.pid=0x8057
+auto_sensor_xtal.upload_port.1.vid=0x2341
+auto_sensor_xtal.upload_port.1.pid=0x0057
+auto_sensor_xtal.upload_port.2.board=nano_33_iot
+
+auto_sensor_xtal.upload.tool=bossac
+auto_sensor_xtal.upload.tool.default=bossac
+auto_sensor_xtal.upload.tool.network=arduino_ota
+auto_sensor_xtal.upload.protocol=sam-ba
+auto_sensor_xtal.upload.maximum_size=262144
+auto_sensor_xtal.upload.maximum_data_size=32768
+auto_sensor_xtal.upload.use_1200bps_touch=true
+auto_sensor_xtal.upload.wait_for_upload_port=true
+auto_sensor_xtal.upload.native_usb=true
+auto_sensor_xtal.build.mcu=cortex-m0plus
+auto_sensor_xtal.build.f_cpu=48000000L
+auto_sensor_xtal.build.usb_product="Automation Sensor Board"
+auto_sensor_xtal.build.usb_manufacturer="Nicholas Bodeux"
+auto_sensor_xtal.build.board=SAMD_NANO_33_IOT
+auto_sensor_xtal.build.core=arduino
+auto_sensor_xtal.build.extra_flags= -D__SAMD21G18A__ {build.usb_flags}
+auto_sensor_xtal.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+auto_sensor_xtal.build.openocdscript=openocd_scripts/arduino_zero.cfg
+auto_sensor_xtal.build.variant=auto_sensor
+auto_sensor_xtal.build.vid=0x2341
+auto_sensor_xtal.build.pid=0x8057
+auto_sensor_xtal.bootloader.tool=openocd
+auto_sensor_xtal.bootloader.tool.default=openocd
+auto_sensor_xtal.bootloader.file=nano_33_iot/samd21_sam_ba_arduino_nano_33_iot.bin
+
+# Combined Automation Board With XTal
+# --------------------
+auto_variant.name=Autoboard
+auto_variant.vid.0=0x2341
+auto_variant.pid.0=0x8057
+auto_variant.vid.1=0x2341
+auto_variant.pid.1=0x0057
+auto_variant.upload_port.0.vid=0x2341
+auto_variant.upload_port.0.pid=0x8057
+auto_variant.upload_port.1.vid=0x2341
+auto_variant.upload_port.1.pid=0x0057
+auto_variant.upload_port.2.board=nano_33_iot
+
+auto_variant.upload.tool=bossac
+auto_variant.upload.tool.default=bossac
+auto_variant.upload.tool.network=arduino_ota
+auto_variant.upload.protocol=sam-ba
+auto_variant.upload.maximum_size=262144
+auto_variant.upload.maximum_data_size=32768
+auto_variant.upload.use_1200bps_touch=true
+auto_variant.upload.wait_for_upload_port=true
+auto_variant.upload.native_usb=true
+auto_variant.build.mcu=cortex-m0plus
+auto_variant.build.f_cpu=48000000L
+auto_variant.build.usb_product="Autoboard"
+auto_variant.build.usb_manufacturer="Nicholas Bodeux"
+auto_variant.build.board=SAMD_NANO_33_IOT
+auto_variant.build.core=arduino
+auto_variant.build.extra_flags= -D__SAMD21G18A__ {build.usb_flags}
+auto_variant.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+auto_variant.build.openocdscript=openocd_scripts/arduino_zero.cfg
+auto_variant.build.variant=auto_variant
+auto_variant.build.vid=0x2341
+auto_variant.build.pid=0x8057
+auto_variant.bootloader.tool=openocd
+auto_variant.bootloader.tool.default=openocd
+auto_variant.bootloader.file=nano_33_iot/samd21_sam_ba_arduino_nano_33_iot.bin
